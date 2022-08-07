@@ -1,4 +1,4 @@
-import { Context, Schema } from 'koishi'
+import { Context, Schema, segment } from 'koishi'
 
 export const name = 'inspect'
 
@@ -16,6 +16,17 @@ export function apply(ctx: Context) {
           ...session.quote,
           selfId: session.selfId,
         })
+      }
+
+      if (target) {
+        const { type, data } = segment.parse(target)[0]
+        if (type === 'at') {
+          return session.text('.user', data)
+        } else if (type === 'sharp') {
+          return session.text('.channel', data)
+        } else {
+          return session.text('.invalid')
+        }
       }
 
       return session.text('.message', session)
