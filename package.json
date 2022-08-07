@@ -1,7 +1,6 @@
 {
   "name": "koishi-plugin-inspect",
   "description": "Inspect on any user, channel or message",
-  "private": true,
   "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -10,13 +9,36 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "koishi": {
+    "description": {
+      "en": "Inspect on any user, channel or message",
+      "zh": "查看用户、频道或消息的详细信息"
+    },
+    "locales": [
+      "zh"
+    ]
+  },
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "inspect",
+    "debug",
+    "info",
+    "context",
+    "channel",
+    "user",
+    "message"
   ],
   "peerDependencies": {
     "koishi": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.45",
+    "koishi": "^4.8.4",
+    "typescript": "^4.7.4"
   }
 }

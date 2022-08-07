@@ -1,0 +1,10 @@
+commands:
+  inspect:
+    description: 查看用户、频道或消息的详细信息
+    messages:
+      message: |
+        消息：{messageId}
+        频道：{channelId}
+        群组：{guildId}
+        用户：{userId}
+        自身：{selfId}
