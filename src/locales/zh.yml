@@ -1,7 +1,7 @@
 commands:
   inspect:
     description: 查看用户、频道或消息的详细信息
-    usage: |
+    usage: |-
       inspect @user
       inspect #channel
       inspect
@@ -9,7 +9,7 @@ commands:
       invalid: 参数无法解析。
       user: 用户 ID：{id}
       channel: 频道 ID：{id}
-      message: |
+      message: |-
         消息 ID：{messageId}
         频道 ID：{channelId}
         群组 ID：{guildId}
